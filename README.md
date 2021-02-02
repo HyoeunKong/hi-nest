@@ -29,7 +29,7 @@ providers: 비즈니스 로직을 처리
 
 ```typescript
 @Controller()
-export class AppController[
+export class AppController {
   constructor(private readonly appService:appService) {}
 
   @Get()
@@ -200,3 +200,13 @@ import { CreatemovieDto } from './create-movie.dto';
 export class UpdateMovieDto extends PartialType(CreatemovieDto) {}
 ```
 CreatemovieDto를 가져와서 쓸 수 있음 하지만 CreatemovieDto 처럼 모든 값이 필수가 아님.
+
+
+## Testing
+
+### unit test : function 과 같은 하나의 유닛을 테스트 하는것
+### e2e test : 전체 시스템을 테스트 하는 것 
+
+1. describe: 테스트를 묘사
+2. beforeEach : 테스트 하기전에 실행되는것
+3. it : 개별 테스트의 줄임말?
