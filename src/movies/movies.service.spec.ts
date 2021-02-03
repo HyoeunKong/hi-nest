@@ -105,7 +105,7 @@ describe('MoviesService', () => {
 
     it('should throw a NotFoundException', () => {
       try {
-        service.deleteOne(999);
+        service.update(999, { title: 'dd' });
       } catch (e) {
         expect(e).toBeInstanceOf(NotFoundException);
         expect(e.message).toEqual('Movie with ID:999 not found');

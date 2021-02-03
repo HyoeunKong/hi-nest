@@ -12,6 +12,7 @@ export class MoviesService {
   }
 
   getOne(id: number): Movie {
+    console.log(id);
     const movie = this.movies.find((movie) => movie.id === id);
 
     if (!movie) {
